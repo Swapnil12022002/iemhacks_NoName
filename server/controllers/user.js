@@ -272,7 +272,7 @@ const resetPassword = asyncWrapper(async (req, res) => {
 
   user.password = req.body.password;
 
-  user.resetPassword = undefined;
+  user.resetPasswordToken = undefined;
   user.resetPasswordExpire = undefined;
 
   await user.save();
